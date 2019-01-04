@@ -1,0 +1,20 @@
+{
+  "name": "gearhead/guten-blocks",
+  "description": "Collection of Gutenberg blocks for Gearhead projects",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Eric Eliseo",
+      "email": "eric@thinkgeneric.com"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Gearhead\\GutenBlocks\\": ""
+    },
+    "files": [
+      "utilities.php"
+    ]
+  }
+}
