@@ -1,47 +1,44 @@
-const {Component} = wp.element;
+/**
+ * Container wrapper
+ */
 
+// Setup the block
+const { Component } = wp.element;
+
+// Import block dependencies and components
 import classnames from 'classnames';
 
+/**
+ * Create a Button wrapper Component
+ */
 export default class Container extends Component {
 
-  constructor(props) {
-    super(...arguments);
-  }
+	constructor( props ) {
+		super( ...arguments );
+	}
 
-  render() {
-    const {
-      attributes: {
-        containerBackgroundColor,
-        containerAlignment,
-        containerPaddingTop,
-        containerPaddingRight,
-        containerPaddingBottom,
-        containerPaddingLeft,
-        containerMarginTop,
-        containerMarginRight,
-        containerMarginLeft,
-        containerMarginBottom,
-        containerWidth,
-        containerMaxWidth
-      }
-    } = this.props;
+	render() {
+		// Setup the attributes
+		const { attributes: { containerBackgroundColor, containerAlignment, containerPaddingTop, containerPaddingRight, containerPaddingBottom, containerPaddingLeft, containerMarginTop, containerMarginBottom, containerWidth, containerMaxWidth }  } = this.props;
 
-    return (
-      <div
-        style={{
-          backgroundColor: containerBackgroundColor,
-          textAlign: containerAlignment,
-          paddingLeft: containerPaddingLeft,
-          paddingRight: containerPaddingRight,
-          paddingTop: containerPaddingTop,
-          paddingBottom: containerPaddingBottom,
-          marginTop: containerMarginTop,
-          marginRight: containerMarginRight,
-          marginLeft: containerMarginLeft,
-          marginBottom: containerMarginBottom,
-        }}
-        className={classnames(this.props.className, `align${containerWidth}`, 'gh-container')}
-      >{this.props.children}</div>
-    );
-  }
+		return (	
+			<div
+				style={ {
+					backgroundColor: containerBackgroundColor,
+					textAlign: containerAlignment,
+					paddingLeft: `${containerPaddingLeft}%`,
+					paddingRight: `${containerPaddingRight}%`,
+					paddingBottom: `${containerPaddingBottom}%`,
+					paddingTop: `${containerPaddingTop}%`,
+					marginTop: `${containerMarginTop}%`,
+					marginBottom: `${containerMarginBottom}%`,
+				} }
+				className={ classnames(
+					this.props.className,
+					`align${containerWidth}`,
+					'gh-block-container',
+				) }
+			>{ this.props.children }</div>
+		);
+	}
 }
