@@ -13,7 +13,7 @@ class GutenbergBlockService {
         // Register core block script
         wp_register_script(
             'gutenberg-card-block',
-            get_stylesheet_directory_uri() . '/dist/blocks/blocks.build.js',
+            get_stylesheet_directory_uri() . '/dist/blocks/blocks.build.js', // todo this will not resolve correctly
             ['wp-blocks', 'wp-element', 'wp-data', 'wp-core-data', 'wp-editor']
         );
 
