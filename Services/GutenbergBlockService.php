@@ -7,7 +7,7 @@ class GutenbergBlockService {
 
     public function register_hooks() {
         add_action('enqueue_block_editor_assets', [$this, 'enqueue_block_editor_assets']);
-        add_filter('block-categories', [$this, 'register_block_category'], 10, 2);
+        add_filter('block_categories', [$this, 'register_block_category'], 10, 2);
     }
 
     protected function vendor_dir() {
