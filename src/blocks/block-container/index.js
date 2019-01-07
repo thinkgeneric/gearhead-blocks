@@ -212,6 +212,7 @@ registerBlockType( 'gearhead-blocks/gh-container', {
 							<img
 								className={ classnames(
 									'gh-container-image',
+									'container',
 									dimRatioToClass( containerDimRatio ),
 									{
 										'has-background-dim': containerDimRatio !== 0,

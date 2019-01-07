@@ -37,6 +37,7 @@ export default class Container extends Component {
 					this.props.className,
 					`align${containerWidth}`,
 					'gh-block-container',
+					'container',
 				) }
 			>{ this.props.children }</div>
 		);

@@ -1,0 +1,99 @@
+.container {
+  max-width: 1366px;
+  width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto; }
+  @media min-width {
+    .container {
+      padding-left: 32px;
+      padding-right: 32px; } }
+
+/**
+ * Editor styles for the admin
+ */
+.container {
+  max-width: 1366px;
+  width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto; }
+  @media min-width {
+    .container {
+      padding-left: 32px;
+      padding-right: 32px; } }
+
+.cover {
+  position: relative;
+  height: 50vh;
+  padding-top: 0.1px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden; }
+  @media (max-width: 500px) {
+    .cover {
+      height: auto;
+      padding-top: 80px;
+      padding-bottom: 80px;
+      text-align: center; } }
+  .cover__container {
+    z-index: 1;
+    position: relative;
+    height: 100%; }
+  .cover__image_box {
+    position: absolute;
+    height: 100%;
+    right: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+        justify-content: flex-end; }
+    @media (max-width: 992px) {
+      .cover__image_box {
+        top: 50%;
+        height: 500px;
+        right: 0; } }
+    @media (max-width: 500px) {
+      .cover__image_box {
+        -webkit-transform: none;
+            -ms-transform: none;
+                transform: none;
+        position: static;
+        height: 240px;
+        margin-bottom: 40px; } }
+  .cover__image {
+    width: 75%; }
+  .cover__text_box {
+    position: absolute;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: 100%;
+    padding: 50px;
+    -ms-flex-line-pack: end;
+        align-content: flex-end; }
+  .cover__title {
+    font-size: 60px;
+    width: 100%;
+    font-style: italic;
+    text-transform: uppercase;
+    line-height: 1; }
+  .cover__description_box {
+    width: 100%;
+    margin-bottom: 70px; }
+    @media (max-width: 992px) {
+      .cover__description_box {
+        margin-left: auto;
+        margin-right: auto; } }
+    @media (max-width: 500px) {
+      .cover__description_box {
+        margin-bottom: 45px; } }
+  .cover__description_text {
+    font-size: 16px; }

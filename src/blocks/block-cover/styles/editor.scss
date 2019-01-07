@@ -1,0 +1,83 @@
+.cover {
+  position: relative; //keeps menu
+  height: 50vh;
+  padding-top: 0.1px; //enables margin-top
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+
+  @media (#{$max_phones}) {
+    height: auto;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+  }
+
+  &__container {
+    z-index: 1;
+    position: relative;
+    height: 100%;
+  }
+
+  &__image_box {
+    position: absolute;
+    height: 100%;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    
+    @media (#{$max_tablets}) {
+      top: 50%;
+      height: 500px;
+      right: 0;
+    }
+
+    @media (#{$max_phones}) {
+      transform: none;
+      position: static;
+      height: 240px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__image {
+    width: 75%;
+  }
+
+  &__text_box {
+    position: absolute;
+    display: flex;
+    width: 50%;
+    flex-wrap: wrap;
+    height: 100%;
+    padding: 50px;
+    align-content: flex-end;    
+  }
+
+  &__title {
+    font-size: 60px;
+    width: 100%;
+    font-style: italic;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  &__description_box {
+    width: 100%;
+    margin-bottom: 70px;
+
+    @media (#{$max_tablets}){
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (#{$max_phones}){
+      margin-bottom: 45px;
+    }
+  }
+
+  &__description_text {
+    font-size: 16px;
+  }
+}
